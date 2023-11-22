@@ -2,7 +2,7 @@ package _02_control_statement;
 
 import java.util.Scanner;
 
-public class practice {
+public class Conditional_Loop_practice {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
