@@ -1,4 +1,4 @@
-package _08_collection_list;
+package _08_collection_list._list;
 
 public class Book {
   private String titile;
