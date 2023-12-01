@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<form id="prac">
+  <button type="button" onclick="voPracResponse();">전송</button>
+  <br />
+  <p>폼 전송 - 실습</p>
+  <fieldset>
+    <label>이름</label>
+    <input type="text" name="name" />
+    <label>성별</label>
+    <input type="radio" value="male" name="gender" />
+    <label>남자</label>
+    <input type="radio" value="female" name="gender" />
+    <label>여자</label>
+    <br />
+    <label>생년월일</label>
+    <select name="year" id="year">
+      <option value="1999">1999</option>
+    </select>
+    <span>년</span>
+    <select name="month" id="month">
+      <option value="10">10</option></select
+    ><span>월</span>
+    <select name="day" id="day">
+      <option value="15">15</option></select
+    ><span>일</span>
+    <br />
+    <label>관심사</label>
+    <input type="checkbox" value="trip" name="interest" />
+    <label>여행</label>
+    <input type="checkbox" value="fashion" name="interest" />
+    <label>패션</label>
+    <input type="checkbox" value="food" name="interest" />
+    <label>음식</label>
+  </fieldset>
+</form>
+
+<script>
+  function voPracResponse() {
+    var form = document.getElementById("prac");
+    axios.post(`/prac/response`, {name: form.name.value})
+            .then((res) => {
+              console.log(res.data + "회원가입 성공");
+            })
+  }
+</script>
+</body>
+</html>
