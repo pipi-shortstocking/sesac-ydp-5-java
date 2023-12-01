@@ -1,12 +1,11 @@
 package sesac.sesacspringboot.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
 @Controller
+// @RestController : Controller 면서 모든 메소드가 @ResponseBody를 갖도록 하는 친구
 public class MainController {
     @GetMapping("/api")
     public String getApi(){return "request";}
@@ -53,5 +52,68 @@ public class MainController {
         model.addAttribute("name", n);
         model.addAttribute("age", age);
         return "response";
+    }
+
+    //////////////////////
+    // practice
+    @GetMapping("/introduce1/{name}")
+    public String getPractice1(@PathVariable String name, Model model) {
+        model.addAttribute("name",name);
+        return "practice";
+    }
+
+    @GetMapping("/introduce2")
+    public String getPractice2(@RequestParam(value="name") String name,
+                               @RequestParam(value="age") String age,
+                               Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("age", age);
+        return "practice";
+    }
+
+    ////////////////////
+    // post로 값을 전달할 때 그 값을 controller에서 받는 방법은 @RequestParam
+    @PostMapping("/post/response1")
+    public String postResponse1(@RequestParam(value="name") String name, Model model) {
+        model.addAttribute("name", name);
+        // required = true임에도 빈 값으로 post가 되는 이유 - input에 name이라는 키가 존재하기 때문
+        return "response";
+    }
+
+    @PostMapping("/post/response2")
+    public String postResponse2(@RequestParam(value="name", required = false) String name, Model model) {
+        model.addAttribute("name", name);
+        return "response";
+    }
+
+    @PostMapping("/post/response3")
+    @ResponseBody // res.send
+    // return 하는 문자열의 template 파일을 불러오는 게 아니라
+    // return 하는 문자열 그대로 값을 전달하는 것
+    public String postResponse3(@RequestParam(value="name", required = false) String name, Model model) {
+        model.addAttribute("name", name);
+        return "response";
+    }
+
+    //////////////////////
+    // practice
+    @GetMapping("/postPrac")
+    public String getPractice(){return "practicePost";}
+
+    @PostMapping("/postPrac")
+    public String postPractice(@RequestParam(value="name") String name,
+                               @RequestParam(value="gender") String gender,
+                               @RequestParam(value="year") String year,
+                               @RequestParam(value="month") String month,
+                               @RequestParam(value="day") String day,
+                               @RequestParam(value="interest") String interest,
+                               Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("gender", gender);
+        model.addAttribute("year", year);
+        model.addAttribute("month", month);
+        model.addAttribute("day", day);
+        model.addAttribute("interest", interest);
+        return "postPrac";
     }
 }
