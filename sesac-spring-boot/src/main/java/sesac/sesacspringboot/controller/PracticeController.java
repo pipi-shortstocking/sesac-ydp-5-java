@@ -3,6 +3,8 @@ package sesac.sesacspringboot.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +30,22 @@ public class PracticeController {
         model.addAttribute("people", person);
         return "practice";
     }
+
+    @GetMapping("/introduce/{name}")
+    public String getPractice1(@PathVariable String name, Model model) {
+        model.addAttribute("name","홍길동");
+        return "practice";
+    }
+
+    @GetMapping("/introduce2")
+    public String getPractice2(@RequestParam(value="name") String name,
+                               @RequestParam(value="age") String age,
+                               Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("age", age);
+        return "practice";
+    }
+
 
     class Person {
         private String name;
