@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23bad8e2-f654-42d7-8f4b-e71b6696e759" name="Changes" comment="" />
+    <list default="true" id="23bad8e2-f654-42d7-8f4b-e71b6696e759" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/mapper/TableMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/mapper/TableMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/resources/mybatis-mapper/TableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/resources/mybatis-mapper/TableMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,24 +16,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2YpjUthub12p6LyFlIxOzIPpQEB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/user/Desktop/sesac-ydp-5-java/src",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/user/Desktop/sesac-ydp-5-java/src&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701229433242</updated>
       <workItem from="1701229434247" duration="13000" />
+      <workItem from="1701849502752" duration="64000" />
     </task>
     <servers />
   </component>

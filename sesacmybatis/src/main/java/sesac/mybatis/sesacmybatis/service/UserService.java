@@ -82,8 +82,8 @@ public class UserService {
         // jpa에서 save()
     }
 
-    public int getUserByName(String name) {
-//    public UserEntity getUserByName(String name) {
+    public int getUserByName(String name) { // 사용자 수 조회
+//    public UserEntity getUserByName(String name) { // 사용자 조회
         // Optional을 쓸 때
 //        UserEntity user = userRepository.findByName(name)
 //                .orElseThrow(()-> new RuntimeException("no user")); // 오류 상황 컨트롤에 용이
@@ -101,8 +101,8 @@ public class UserService {
         return user.size();
     }
 
-    public int getUserByNameAndNickname(String name, String nickname) {
-//    public UserEntity getUserByNameAndNickname(String name, String nickname) {
+    public int getUserByNameAndNickname(String name, String nickname) { // 사용자 수 조회
+//    public UserEntity getUserByNameAndNickname(String name, String nickname) { // 사용자 조회
         // Optional을 쓸 때
 //        UserEntity user = userRepository.findByNameAndNickname(name, nickname);
 //        return  user;
@@ -111,8 +111,8 @@ public class UserService {
         return user.size();
     }
 
-    public int getUserByNickname(String nickname) {
-//    public UserEntity getUserByNickname(String nickname) {
+    public int getUserByNickname(String nickname) { // 사용자 수 조회
+//    public UserEntity getUserByNickname(String nickname) { // 사용자 조회
         // Optional을 쓸 때
 //        UserEntity user = userRepository.findByNickname(nickname)
 //                .orElseThrow(()-> new RuntimeException("no user - nickname"));
@@ -122,14 +122,18 @@ public class UserService {
         return user.size();
     }
 
-    public int getUserByNameOrNickname(String name, String nickname) {
-        List<UserEntity> user = userRepository.findByNameOrNickname(name, nickname);
+    public int getUserByNameOrNickname(String name, String nickname) { // 사용자 수 조회
+        List<UserEntity> user = userRepository.findByNameOrNickname(name, nickname); // 사용자 조회
         return user.size();
     }
 
-    public UserEntity findExist(String name) {
-        UserEntity user = userRepository.findExist(name);
+    public String findExist(String name) { // 사용자 조회
+//    public UserEntity findExist(String name) { // 사용자 조회
+//        UserEntity user = userRepository.findExist(name);
+//        return user;
 
-        return user;
+        boolean isExist = userRepository.existsByName(name);
+        if(isExist) return "있습니다.";
+        else return "없습니다.";
     }
 }

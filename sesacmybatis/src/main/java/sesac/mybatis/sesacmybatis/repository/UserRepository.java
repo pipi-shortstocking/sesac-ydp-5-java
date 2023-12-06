@@ -35,6 +35,8 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 
     List<UserEntity> findByNameOrNickname(String name, String nickname);
 
-    @Query(nativeQuery = true, value="select * from user2 where name=:name")
-    UserEntity findExist(String name);
+//    @Query(nativeQuery = true, value="select * from user2 where name=:name")
+//    UserEntity findExist(String name);
+    // JPA 메소드 존재
+    boolean existsByName(String name);
 }
