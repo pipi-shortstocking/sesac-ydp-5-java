@@ -17,7 +17,8 @@ public class TableController {
 
     @GetMapping("board")
     public String getTable(Model model) {
-        List<TableDTO> table = tableService.getTableList();
+        List<TableDTO> table = tableService.getTableList2();
+//        List<TableDTO> table = tableService.getTableList();
         model.addAttribute("list", table);
 
         return "table";
@@ -38,7 +39,10 @@ public class TableController {
     @PatchMapping("board")
     @ResponseBody
     public void updateOne(@RequestBody Table table) {
-        tableService.updateOne(table);
+//        tableService.updateOne(table);
+
+        // JPA
+
     }
 
     @DeleteMapping("board")
