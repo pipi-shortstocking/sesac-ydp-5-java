@@ -36,8 +36,10 @@ public class TableService {
     }
 
     public void insertOne(Table table) {
-        tableMapper.InsertOne(table);
+        tableMapper.insertOne(table);
     }
 
     public void updateOne(Table table) { tableMapper.updateOne(table); }
+
+    public void deleteOne(int id) { tableMapper.deleteOne(id); }
 }

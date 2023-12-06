@@ -15,7 +15,7 @@ public class TableController {
     @Autowired
     TableService tableService;
 
-    @GetMapping("table")
+    @GetMapping("board")
     public String getTable(Model model) {
         List<TableDTO> table = tableService.getTableList();
         model.addAttribute("list", table);
@@ -39,5 +39,11 @@ public class TableController {
     @ResponseBody
     public void updateOne(@RequestBody Table table) {
         tableService.updateOne(table);
+    }
+
+    @DeleteMapping("board")
+    @ResponseBody
+    public void deleteOne(@RequestParam int id) {
+        tableService.deleteOne(id);
     }
 }

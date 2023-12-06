@@ -11,8 +11,10 @@ import java.util.List;
 public interface TableMapper {
     List<Table> showAll();
 
-    @Insert("insert into `table`(title, content, writer) values (#{title}, #{content},#{writer})")
-    void InsertOne(Table table);
+    // insert, update, delete는 return 되는 객체가 없음
+    void insertOne(Table table);
 
     void updateOne(Table table);
+
+    void deleteOne(int id);
 }
