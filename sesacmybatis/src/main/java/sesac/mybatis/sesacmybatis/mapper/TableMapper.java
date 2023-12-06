@@ -14,5 +14,5 @@ public interface TableMapper {
     @Insert("insert into `table`(title, content, writer) values (#{title}, #{content},#{writer})")
     void InsertOne(Table table);
 
-    List<Table> updateOne();
+    void updateOne(Table table);
 }

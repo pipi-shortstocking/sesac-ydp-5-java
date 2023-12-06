@@ -35,11 +35,9 @@ public class TableController {
         return "redirect:/";
     }
 
-//    @PatchMapping("board")
-//    public String patchTable(@RequestBody TableDTO tableDTO, Model model) {
-///*        List<TableDTO> table = tableService.updateTableList();
-//        model.addAttribute("list", table);*/
-//
-//        return "table";
-//    }
+    @PatchMapping("board")
+    @ResponseBody
+    public void updateOne(@RequestBody Table table) {
+        tableService.updateOne(table);
+    }
 }

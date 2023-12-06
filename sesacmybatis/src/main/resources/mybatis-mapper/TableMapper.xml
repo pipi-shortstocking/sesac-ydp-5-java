@@ -7,7 +7,8 @@
         SELECT `table`.* FROM `table`
     </select>
 
-    <update id="updateOne">
-        UPDATE `table` SET title = #{title}, content = #{content}, writer = #{writer} WHERE id = #{id}
+    <update id="updateOne" parameterType="map">
+        UPDATE `table` SET title = #{title}, content = #{content}, writer = #{writer}
+        WHERE id = #{id}
     </update>
 </mapper>
