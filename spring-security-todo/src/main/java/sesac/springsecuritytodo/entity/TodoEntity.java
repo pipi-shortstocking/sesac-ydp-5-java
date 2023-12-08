@@ -1,4 +1,4 @@
-package sesac.springsecuritytodo;
+package sesac.springsecuritytodo.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

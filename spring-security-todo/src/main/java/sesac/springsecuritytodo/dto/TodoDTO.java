@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import sesac.springsecuritytodo.TodoEntity;
+import sesac.springsecuritytodo.entity.TodoEntity;
 
 @Builder
 @NoArgsConstructor
