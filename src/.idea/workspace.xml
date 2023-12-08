@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23bad8e2-f654-42d7-8f4b-e71b6696e759" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/mapper/TableMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/mapper/TableMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/java/sesac/mybatis/sesacmybatis/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sesacmybatis/src/main/resources/mybatis-mapper/TableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sesacmybatis/src/main/resources/mybatis-mapper/TableMapper.xml" afterDir="false" />
-    </list>
+    <list default="true" id="23bad8e2-f654-42d7-8f4b-e71b6696e759" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +38,7 @@
       <updated>1701229433242</updated>
       <workItem from="1701229434247" duration="13000" />
       <workItem from="1701849502752" duration="64000" />
+      <workItem from="1702010099211" duration="16000" />
     </task>
     <servers />
   </component>
