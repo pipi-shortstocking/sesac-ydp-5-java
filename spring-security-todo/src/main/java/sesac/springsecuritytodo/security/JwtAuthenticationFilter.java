@@ -2,7 +2,6 @@ package sesac.springsecuritytodo.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -41,7 +40,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             // token 검사
             // - 토큰 인증 부분 구현
             // - 유효시간 검사 생략
-            if (token != null & !token.equalsIgnoreCase("null")) {
+            if (token != null && !token.equalsIgnoreCase("null")) {
                 // 토큰이 null, "null" 이 아니라면 토큰 검사 진행
 
                 // userId 가져오기 (만약 토큰이 위조되었다면 예외 처리)
@@ -49,8 +48,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 log.info("Authenticated user ID: " + userId);
 
                 // 인증 완료 -> SecurityContextHolder 에 등록되어야 인증된 사용자!
-                AbstractAuthenticationToken authentication
-                        = new UsernamePasswordAuthenticationToken(userId, null, AuthorityUtils.NO_AUTHORITIES); // 사용자 정보
+                AbstractAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userId, null, AuthorityUtils.NO_AUTHORITIES);  // 사용자 정보
                 authentication.setDetails((new WebAuthenticationDetailsSource().buildDetails(request))); // 사용자 인증 세부 정보 설정
 
                 SecurityContext securityContext = SecurityContextHolder.createEmptyContext(); // 빈 SecurityContext 생성
@@ -70,7 +68,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         String bearerToken = request.getHeader("Authorization");
 
         // 토큰 파싱
-        if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
+        if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer "))  {
             return bearerToken.substring(7); // Bearer 6글자 + 공백 1글자
         }
 
